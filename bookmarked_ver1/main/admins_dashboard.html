@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard | Florina</title>
+  <link rel="stylesheet" href="../newstyles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="r-header">
+  <a href="../main/home.html">
+    <img src="../pics/logo4.png" alt="Florina Logo" class="header-logo">
+  </a>
+  <div>
+    <h1 class="paris-font">Florina Flower Shop</h1>
+    <p class="cormont-font">Where flowers are our inspiration to create lasting memories</p>
+  </div>
+</header>
+
+<nav class="r-navbar cormont-font">
+  <a href="../about_blog/about_us.html">About Us</a>
+  <a href="../about_blog/blog.html">Blog</a>
+  <a href="../main/bouquet.html">Bouquet</a>
+  <a href="../vases/vasebouquets.html">Vases</a>
+  <a href="../garden/garden_corner.html">The Garden</a>
+  <a href="../main/contact_us.html">Contact</a>
+</nav>
+
+<div class="paris-font">
+  <h2>Admin Dashboard</h2>
+</div>
+
+<!-- Search Bar -->
+<div style="text-align: center; margin-bottom: 20px;">
+  <input type="text" placeholder="Search product by name..." style="padding: 10px; width: 300px; border: 2px solid #FFE2E2; border-radius: 5px;">
+</div>
+
+<div class="container">
+
+  <!-- Add Product -->
+  <section class="RahafContainers address-section">
+    <h3 class="cormont-font">Add New Product</h3>
+    <form>
+      <div class="label-group">
+        <label>Product Name:</label>
+        <input type="text" placeholder="e.g., Elegant Lilies">
+      </div>
+      <div class="label-group">
+        <label>Price (SAR):</label>
+        <input type="number" placeholder="e.g., 350">
+      </div>
+      <div class="label-group">
+        <label>Description:</label>
+        <textarea placeholder="Enter product description..." rows="3" style="width: 60%; border: 2px solid #FFE2E2; border-radius: 5px; background-color: #FFFDEC; color: #86A788;"></textarea>
+      </div>
+      <div class="label-group">
+        <label>Category:</label>
+        <select>
+          <option>Roses</option>
+          <option>Lilies</option>
+          <option>Tulips</option>
+          <option>Mixed</option>
+          <option>Seeds</option>
+        </select>
+      </div>
+      <div class="label-group">
+        <label>Image:</label>
+        <input type="file">
+      </div>
+      <button class="checkout">Add Product</button>
+    </form>
+  </section>
+
+  <!-- Modify Product -->
+  <section class="RahafContainers address-section">
+    <h3 class="cormont-font">Modify Product</h3>
+    <form>
+      <div class="label-group">
+        <label>Select Product:</label>
+        <select>
+          <option>Blush Whisper</option>
+          <option>Apricot Daydream</option>
+          <option>Arnaia</option>
+          <option>Wild Meadow</option>
+          <option>Pure Grace</option>
+          <option>Apricot Daydream (Vase)</option>
+          <option>Stargazer Dream</option>
+          <option>Lilac Drift</option>
+          <option>Painted Petals</option>
+          <option>Marigold Seeds</option>
+          <option>Sunflower Seeds</option>
+          <option>Sweet Alyssum Seeds</option>
+          <option>Cornflower Seeds</option>
+          <option>Calendula Seeds</option>
+          <option>Chamomile Seeds</option>
+        </select>
+      </div>
+      <div class="label-group">
+        <label>New Price:</label>
+        <input type="number" placeholder="Enter new price">
+      </div>
+      <div class="label-group">
+        <label>Description:</label>
+        <textarea placeholder="Enter new description..." rows="3" style="width: 60%; border: 2px solid #FFE2E2; border-radius: 5px; background-color: #FFFDEC; color: #86A788;"></textarea>
+      </div>
+      <div class="label-group">
+        <label>Upload New Image (Optional):</label>
+        <input type="file">
+      </div>
+      <button class="checkout">Update Product</button>
+    </form>
+  </section>
+
+  <!-- Delete Product -->
+  <section class="RahafContainers address-section">
+    <h3 class="cormont-font">Delete Product</h3>
+    <form>
+      <div class="label-group">
+        <label>Select Product:</label>
+        <select>
+          <option>Blush Whisper</option>
+          <option>Apricot Daydream</option>
+          <option>Arnaia</option>
+          <option>Wild Meadow</option>
+          <option>Pure Grace</option>
+          <option>Apricot Daydream (Vase)</option>
+          <option>Stargazer Dream</option>
+          <option>Lilac Drift</option>
+          <option>Painted Petals</option>
+          <option>Marigold Seeds</option>
+          <option>Sunflower Seeds</option>
+          <option>Sweet Alyssum Seeds</option>
+          <option>Cornflower Seeds</option>
+          <option>Calendula Seeds</option>
+          <option>Chamomile Seeds</option>
+        </select>
+      </div>
+      <button class="checkout delete" >Delete Product</button>
+    </form>
+  </section>
+
+</div>
+
+<!-- Logout Button -->
+<a href="home.html">
+  <button class="logout-btn cormont-font header-right">Logout</button>
+</a>
+
+<footer id="j-footer">
+  <p>&copy; 2025 Florina. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

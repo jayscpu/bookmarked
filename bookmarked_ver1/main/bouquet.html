@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Shop</title>
+    <link rel="stylesheet" href="../newstyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+</head>
+    
+    
+<body>
+<header class="r-header">
+      <a href="../main/home.html">
+      <img src="../pics/logo4.png" alt="Florina Logo" class="header-logo">
+      </a>
+       <div>
+      <h1 class="paris-font">Florina Flower Shop</h1>
+      <p class="cormont-font">Where flowers are our inspiration to create lasting memories</p>
+      </div>
+</header>
+
+    <!-- Navbar -->
+ <nav class="r-navbar cormont-font">
+        <a href="../about_blog/about_us.html">About Us</a>
+        <a href="../about_blog/blog.html">Blog</a>
+        <a href="../main/bouquet.html">Bouquet</a>
+        <a href="../vases/vasebouquets.html">Vases</a>
+        <a href="../garden/garden_corner.html">The Garden</a>
+        <a href="../main/contact_us.html">Contact</a>
+    </nav>
+    
+    
+     <div class="filter-menu">
+            <button class="filter-btn cormont-font">Filter Flowers </button>
+            <div class="filter-dropdown cormont-font">
+                <h3>Price Range:</h3>
+                <label><input type="checkbox" class="price-filter" value="low"> Below <img src="../pics/SRA.png" class="sar-icon" alt="SAR"> 200</label>
+                <label><input type="checkbox" class="price-filter" value="mid"> <img src="../pics/SRA.png" class="sar-icon" alt="SAR"> 200 - 250</label>
+
+                <h3>Flower Color:</h3>
+                <label><input type="checkbox" class="color-filter" value="pink"> Pink</label>
+                <label><input type="checkbox" class="color-filter" value="white"> White</label>
+
+                <button onclick="applyFilters()">Apply Filters</button>
+            </div>
+        </div>
+    
+  
+  <div class="paris-font" >
+      <h2> Flower Bouquets </h2></div>
+    
+    <div class="container">
+        <!-- Product 1 -->
+        <div class="card cormont-font" data-price="228" data-color="pink">
+            <a href="../flowers-Bouquet/Blush Whisper.html">
+            <img src="..\pics/flower1-bouquet.jpg" alt="Pink lilies">
+            <div class="info">
+                <h3>Blush Whisper</h3>
+                <p class="price cormont-font"><img src="../pics/SRA.png" class="sar-icon" alt="SAR"> 228.00</p>
+            </div>
+                 </a>
+        </div>
+        
+        <!-- Product 2 -->
+
+        <div class="card cormont-font" data-price="219" data-color="pink">
+            <a href="../flowers-Bouquet/loreen.html" >
+            <img src="..\pics/flower2-bouquet.jpg" alt="loreen">
+            <div class="info">
+                <h3>Loreen</h3>
+                <p class="price cormont-font"><img src="../pics/SRA.png" class="sar-icon" alt="SAR"> 219.00</p>
+            </div>
+                </a>
+        </div>
+        
+        <!-- Product 3 -->
+
+        <div class="card cormont-font"  data-price="172" data-color="white">
+            <a href="../flowers-Bouquet/arnaia.html">
+            <img src="..\pics/flower3-bouquet.jpg" alt="Arnaia">
+            <div class="info">
+                <h3>Arnaia</h3>
+                <p class="price cormont-font"><img src="../pics/SRA.png" class="sar-icon" alt="SAR"> 172.00</p>
+                
+            </div>
+                </a>
+        </div>
+        
+        <!-- Product 4 -->
+        
+         <div class="card cormont-font" data-price="219" data-color="pink">
+            <a href="../flowers-Bouquet/Wild%20Meadow.html" >
+            <img src="../pics/flower4-bouquet.webp" alt="Wild Meadow">
+            <div class="info">
+                <h3>Wild Meadow</h3>
+                <p class="price" cormont-font><img src="../pics/SRA.png" class="sar-icon" alt="SAR"> 213.00</p>
+            </div>
+                </a>
+        </div>
+
+    </div>
+    
+ <script>
+function applyFilters() {
+    let selectedPrices = Array.from(document.querySelectorAll(".price-filter:checked")).map(el => el.value);
+    let selectedColors = Array.from(document.querySelectorAll(".color-filter:checked")).map(el => el.value);
+
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        let price = parseInt(card.getAttribute("data-price"));
+        let color = card.getAttribute("data-color");
+
+        let priceMatch = selectedPrices.length === 0 ||
+            (selectedPrices.includes("low") && price < 200) ||
+            (selectedPrices.includes("mid") && price >= 200 && price <= 250) ||
+            (selectedPrices.includes("high") && price > 250);
+
+        let colorMatch = selectedColors.length === 0 || selectedColors.includes(color.toLowerCase());
+
+        if (priceMatch && colorMatch) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+</script>
+    
+    
+  <footer id="j-footer">
+  <p> &copy; 2025 Florina. All rights reserved. </p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Flower vases | Florina</title>
+    <link rel="stylesheet" href="../newstyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<header class="r-header">
+      <a href="../main/home.html">
+      <img src="../pics/logo4.png" alt="Florina Logo" class="header-logo">
+      </a>
+       <div>
+      <h1 class="paris-font">Florina Flower Shop</h1>
+      <p class="cormont-font">Where flowers are our inspiration to create lasting memories</p>
+      </div>
+</header>
+
+     <!-- Navbar -->
+ <nav class="r-navbar cormont-font">
+        <a href="../about_blog/about_us.html">About Us</a>
+        <a href="../about_blog/blog.html">Blog</a>
+        <a href="../main/bouquet.html">Bouquet</a>
+        <a href="../vases/vasebouquets.html">Vases</a>
+        <a href="../garden/garden_corner.html">The Garden</a>
+        <a href="../main/contact_us.html">Contact</a>
+    </nav>
+        <div class="filter-menu">
+            <button class="filter-btn cormont-font">Filter Flowers</button>
+            <div class="filter-dropdown cormont-font">
+                <h3>Filter by Category</h3>
+                <label><input type="checkbox" id="filter-roses"> Roses</label>
+                <label><input type="checkbox" id="filter-lilies"> Lilies</label>
+                <label><input type="checkbox" id="filter-tulips"> Tulips</label>
+                <button>Apply</button>
+              
+            </div>
+        </div>
+
+    <div class="paris-font" >
+      <h2> Vase Bouquete</h2></div>
+    <div class="container cormont-font">
+        <!-- Product 1 -->
+        <div class="card" data-category="lilies">
+            <a href="flowervase1.html">
+                <img src="../pics/flowervase1.png" alt="White Lilies in a Tall Glass Vase">
+                <div class="info">
+                    <h3>Pure Grace</h3>
+                    <div class="price"><img src="../pics/SRA.png" class="sar-icon" alt="SAR"> 363.00</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="card">
+            <a href="flowervase2.html">
+                <img src="../pics/flowervase2.png" alt="Apricot Daydream">
+                <div class="info">
+                    <h3>Apricot Daydream</h3>
+                    <div class="price"><img src="../pics/SRA.png" class="sar-icon" alt="SAR"> 419.00</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="card" data-category="lilies roses">
+            <a href="flowervase3.html">
+                <img src="../pics/flowervase3.png" alt="Stargazer Dream">
+                <div class="info">
+                    <h3>Stargazer Dream</h3>
+                    <div class="price"><img src="../pics/SRA.png" class="sar-icon" alt="SAR"> 553.00</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="card" data-category="roses">
+            <a href="flowervase4.html">
+                <img src="../pics/flowervase4.png" alt="Lilac Drift">
+                <div class="info">
+                    <h3>Lilac Drift</h3>
+                    <div class="price"><img src="../pics/SRA.png" class="sar-icon" alt="SAR"> 462.00</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="card" data-category="tulips">
+            <a href="flowervase5.html">
+                <img src="../pics/flowervase5.png" alt="Painted Petals">
+                <div class="info">
+                    <h3>Painted Petals</h3>
+                    <div class="price"><img src="../pics/SRA.png" class="sar-icon" alt="SAR"> 385.00</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+<!--javascript for filtering-->
+    <script>
+    document.querySelector('.filter-dropdown button').addEventListener('click', () => {
+        const showRoses = document.getElementById('filter-roses').checked;
+        const showLilies = document.getElementById('filter-lilies').checked;
+        const showTulips = document.getElementById('filter-tulips').checked;
+
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            const category = card.getAttribute('data-category') || "";
+            const isRoses = category.includes('roses');
+            const isLilies = category.includes('lilies');
+            const isTulips = category.includes('tulips');
+
+            const shouldShow =
+                (showRoses && isRoses) ||
+                (showLilies && isLilies) ||
+                (showTulips && isTulips) ||
+                (!showRoses && !showLilies && !showTulips); // show all if none selected
+
+            card.style.display = shouldShow ? 'block' : 'none';
+        });
+    });
+    </script>
+    
+    
+    
+    
+  <footer id="j-footer">
+  <p> &copy; 2025 Florina. All rights reserved. </p>
+  </footer>
+</body>
+</html>

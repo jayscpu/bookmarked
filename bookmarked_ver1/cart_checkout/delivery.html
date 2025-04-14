@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delivery Details | Florina</title>
+  <link rel="stylesheet" href="../newstyles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+  </head>
+<body id="checkout-body">
+    
+<header class="r-header">
+      <a href="../main/home.html">
+      <img src="../pics/logo4.png" alt="Florina Logo" class="header-logo">
+      </a>
+       <div>
+      <h1 class="paris-font">Florina Flower Shop</h1>
+      <p class="cormont-font">Where flowers are our inspiration to create lasting memories</p>
+      </div>
+</header>
+
+      <!-- Navbar -->
+ <nav class="r-navbar cormont-font">
+        <a href="../about_blog/about_us.html">About Us</a>
+        <a href="../about_blog/blog.html">Blog</a>
+        <a href="../main/bouquet.html">Bouquet</a>
+        <a href="../vases/vasebouquets.html">Vases</a>
+        <a href="../garden/garden_corner.html">The Garden</a>
+        <a href="../main/contact_us.html">Contact</a>
+    </nav>
+ 
+  <br>
+
+  <div class="RahafContainers checkout-container cormont-font">
+    <!-- the steps -->
+    <div class="step-container">
+      <div class="step completed">
+        <div class="circle">✓</div>
+        <p>Cart</p>
+      </div>
+      <div class="line"></div>
+      <div class="step active">
+        <div class="circle">2</div>
+        <p>Delivery Details</p>
+      </div>
+      <div class="line dashed"></div>
+      <div class="step">
+        <div class="circle">3</div>
+        <p>Payment</p>
+      </div>
+    </div>
+
+    <div class="checkout-content">
+      <!-- Address Section -->
+      <div class="address-section cormont-font">
+        <h3 class="cormont-font">Delivery Address</h3>
+        <form>
+          <div class="form-group label-group">
+            <label for="street-address">Street Address</label>
+            <input type="text" id="street-address" name="street-address" placeholder="123 Main St" required>
+          </div>
+
+          <div class="form-group label-group">
+            <label for="city">City</label>
+            <select id="city" name="city" required>
+              <option value="">Select a city</option>
+              <option value="Riyadh">Riyadh</option>
+              <option value="Jeddah">Jeddah</option>
+              <option value="Dammam">Dammam</option>
+              <option value="Mecca">Mecca</option>
+              <option value="Medina">Medina</option>
+              <option value="Abha">Abha</option>
+            </select>
+          </div>
+
+          <div class="form-group label-group">
+            <label for="postal-code">Postal Code</label>
+            <input type="text" id="postal-code" name="postal-code" placeholder="12345" required>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <br>
+    <button onclick="window.location.href='payment.html'" class="cormont-font">Go to payment</button>
+  </div>
+
+  <footer id="j-footer" class="cormont-font">
+    <p>&copy; 2025 Florina. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | Florina</title>
+    <link rel="stylesheet" href="../newstyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+    </head>
+<body id="cart-body">
+    
+<header class="r-header">
+      <a href="../main/home.html">
+      <img src="../pics/logo4.png" alt="Florina Logo" class="header-logo">
+      </a>
+       <div>
+      <h1 class="paris-font">Florina Flower Shop</h1>
+      <p class="cormont-font">Where flowers are our inspiration to create lasting memories</p>
+      </div>
+</header>
+
+      <!-- Navbar -->
+ <nav class="r-navbar cormont-font">
+        <a href="../about_blog/about_us.html">About Us</a>
+        <a href="../about_blog/blog.html">Blog</a>
+        <a href="../main/bouquet.html">Bouquet</a>
+        <a href="../vases/vasebouquets.html">Vases</a>
+        <a href="../garden/garden_corner.html">The Garden</a>
+        <a href="../main/contact_us.html">Contact</a>
+    </nav>
+    
+    
+  <br>
+
+  <!-- the steps -->
+  <div class="step-container">
+    <div class="step active">
+      <div class="circle">1</div>
+      <p>Cart</p>
+    </div>
+    <div class="line dashed"></div>
+    <div class="step">
+      <div class="circle">2</div>
+      <p>Delivery Details</p>
+    </div>
+    <div class="line dashed"></div>
+    <div class="step">
+      <div class="circle">3</div>
+      <p>Payment</p>
+    </div>
+  </div>
+
+  <br>
+
+  <main class="cormont-font">
+    <section id="cart">
+      <div class="cart-item">
+        <img src="../pics/flower2-bouquet.jpg" alt="Beautiful Flower Bouquet">
+        <div class="item-info">
+          <h3 class="cormont-font">Loreen</h3>
+          <p class="cormont-font">Price:<img src="../pics/SRA.png" class="sar-icon" alt="SAR">219</p>
+          <button class="cormont-font">Remove</button>
+          <aside> 
+            <div class="quantity-selector">
+              <button class="decrease cormont-font">-</button>
+              <span class="quantity">1</span>
+              <button class="increase cormont-font">+</button>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <img src="../pics/flower1-bouquet.jpg" alt="Lovely Flower Bouquet">
+        <div class="item-info">
+          <h3 class="cormont-font">Blush Whisper</h3>
+          <p class="cormont-font">Price: <img src="../pics/SRA.png" class="sar-icon" alt="SAR">228</p>
+          <button class="cormont-font">Remove</button>
+          <aside> 
+            <div class="quantity-selector">
+              <button class="decrease cormont-font">-</button>
+              <span class="quantity">1</span>
+              <button class="increase cormont-font">+</button>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <aside id="aside">
+        <div id="container">
+          <h2 id="title" class="cormont-font">Gift Card and Message</h2>
+          <div id="card-section">
+            <div class="card-box" id="add-message-box">
+              <div class="icon">✽</div>
+              <p class="instruction-text cormont-font">Click here to add your message</p>
+            </div>
+            <button id="ok" class="cormont-font">Ok</button>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <div class="total cormont-font">
+      <img id="whiteCart" src="../pics/whiteCart.png" alt="cart">
+      <br>
+      <label for="promo-code">
+        <img id="promo" src="../pics/promo.png" class="sar-icon" alt="promo code"> Enter Discount Code:
+      </label>
+      <input type="text" id="promo-code" placeholder="Enter code">
+      <button class="apply-code cormont-font">Apply</button>
+
+      <h4>Delievery:<img src="../pics/SRA.png" class="sar-icon" alt="SAR"> 20</h4>
+      <h4>Price after Discount:<img src="../pics/SRA.png" class="sar-icon" alt="SAR"><del> 467</del> <img src="../pics/SRA.png" class="sar-icon" alt="SAR"> 447</h4>
+      <h2>Total:<img src="../pics/SRA.png" class="sar-icon" alt="SAR"> 447</h2>
+      <button onclick="window.location.href='delivery.html'" class="cormont-font">Delivery details</button>
+    </div>
+  </main>
+
+  <footer id="j-footer" class="cormont-font">
+    <p>&copy; 2025 Florina. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+
