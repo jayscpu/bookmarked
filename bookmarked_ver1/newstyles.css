@@ -29,7 +29,7 @@ body, html {
 .r-navbar a {
     text-decoration: none;
     color: #6b4b4b;
-    font-weight: bold;
+    font-weight: normal;
     padding: 10px 15px;
 }
 .r-navbar a:hover {
@@ -1222,8 +1222,9 @@ body {
 
 
 .signup-btn {
-    background-color: #f7f4ea;
-    color: #fff;
+    background-color:   #f7f4ea
+;
+    color: #4d080d;
     border: none;
     padding: 12px 24px; 
     font-size: 1rem; 
@@ -1238,7 +1239,8 @@ body {
 }
 
 .signup-btn:hover {
-    background-color: #FFE2E2;
+    background-color: #86A788
+;
 }
 
 
